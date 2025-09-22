@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+
+    <style>
+        p {
+            margin: 0;
+            display: inline;
+        }
+
+        #main {
+            border: 2px solid rgba(255, 255, 255, 20);
+            width: 500px;
+            /* height: 350px; */
+            text-align: center;
+            margin: auto;
+            background-color: rgb(59, 61, 179);
+            backdrop-filter: blur(5px);
+            margin-top: 250px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            margin: 0;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        body {
+            position: relative;
+            margin: 0;
+            background-color: rgb(206, 170, 86);
+            color: white;
+            background: url(https://img.freepik.com/free-photo/medicine-blue-background-flat-lay_23-2149341573.jpg?t=st=1745573875~exp=1745577475~hmac=a529c29703a80a6b3d50dc357a361914eb8ef2d64b2f9b341e67d22cc278f885&w=1380);
+            background-size: cover;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .alert-msg
+        {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #login {
+            border: none;
+            margin-top: 5px;
+            border-radius: 25px;
+            width: 300px;
+            height: 35px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+
+        .links {
+            text-decoration: none;
+            color: white;
+            font-weight: 900;
+        }
+
+        .in {
+            height: 30px;
+            width: 300px;
+            border-radius: 20px;
+            text-indent: 7px;
+            margin-bottom: 10px;
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+        }
+
+        .in::placeholder {
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- 
+    <div id="h2" class="container my-3 text-center">
+        <h2 style="text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-top: 30px;">
+            {% if msg %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{msg}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %} </h2>
+    </div> -->
+    <div class="container w-50 text-center alert-msg">
+        {% if msg %}
+        <div class="alert mt-3 alert-success alert-dismissible fade show" role="alert">
+            <strong>{{msg}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+
+    </div>
+    <div id="main" class="shadow">
+        <div class="my-5">
+        <H1 class="">Login</H1>
+        <form method="post">
+            <input class="in" name="username" type="text" placeholder="Username"><br>
+            <input class="in" name="password" type="password" placeholder="Password"><br>
+            <input id="login" type="submit" value="Login"><br>
+            <P>Don't Have an account?</P>
+            <a class="links" href="/registration">Registration</a>
+        </form>
+    </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <!-- AOS css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- custom css -->
+    <link rel="stylesheet" href="/css/admin_style.css">
+</head>
+
+<body id="ad-body">
+    <!-- sidebar section -->
+    <div class="sidebar-container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <!-- <span class="menu-icon"><img src="/img/Lkm_foot_logo.png" alt=""></span> -->
+                        <span class="menu-title">LAKME</span>
+                    </a>
+                </li>
+                <li class="hovered">
+                    <a href="Dashboard.html">
+                        <span class="menu-icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="menu-title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="my_profile.html">
+                        <span class="menu-icon">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <span class="menu-title">My profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Register_admin.html">
+                        <span class="menu-icon">
+                            <ion-icon name="person-add-outline"></ion-icon>
+                        </span>
+                        <span class="menu-title">Register admin</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin_product.html">
+                        <span class="menu-icon">
+                            <ion-icon name="cube-outline"></ion-icon>
+                        </span>
+                        <span class="menu-title">Products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin_login.html">
+                        <span class="menu-icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="menu-title">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- sidebar is over -->
+
+    <!-- main section -->
+    <main class="dashboard-main">
+        <!-- header section -->
+        <div class="topbar">
+            <div class="sidebarToggle">
+                <i class="bi bi-grid"></i>
+            </div>
+            <div class="topbarLogo">
+                <a href="Dashboard.html"><img src="/img/Lkm_foot_logo.png" alt=""></a>
+            </div>
+            <div class="searchbar">
+                <label>
+                    <input type="text" id="adminSearchInput" placeholder="Search here">
+                    <i class="bi bi-search"></i>
+                </label>
+            </div>
+
+        </div>
+
+        <!-- main content start -->
+        <div class="main-con">
+            <div class="container-fluid mt-4">
+                <!-- 1. Summary Cards -->
+                <div class="row g-4 mb-4">
+                    <div class="col-md-3">
+                        <div class="card shadow-sm text-center p-3">
+                            <div class="card-icon text-primary">👤</div>
+                            <h5 class="mt-2">Total Users</h5>
+                            <h3>3,240</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card shadow-sm text-center p-3">
+                            <div class="card-icon text-success">📦</div>
+                            <h5 class="mt-2">Orders This Month</h5>
+                            <h3>1,120</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card shadow-sm text-center p-3">
+                            <div class="card-icon text-warning">💰</div>
+                            <h5 class="mt-2">Total Sales</h5>
+                            <h3>₹4,52,000</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card shadow-sm text-center p-3">
+                            <div class="card-icon text-danger">🧴</div>
+                            <h5 class="mt-2">Total Products</h5>
+                            <h3>220</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Recent Orders Today -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-white">
+                        <h5 class="mb-0">Recent Orders (Today)</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#1001</td>
+                                    <td>Anjali Mehta</td>
+                                    <td>₹1,299</td>
+                                    <td><span class="badge bg-success">Delivered</span></td>
+                                    <td>10:30 AM</td>
+                                </tr>
+                                <tr>
+                                    <td>#1002</td>
+                                    <td>Riya Kapoor</td>
+                                    <td>₹2,499</td>
+                                    <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                    <td>12:15 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>#1003</td>
+                                    <td>Neha Sharma</td>
+                                    <td>₹899</td>
+                                    <td><span class="badge bg-danger">Cancelled</span></td>
+                                    <td>2:00 PM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 3. Quick Access with Navigation -->
+                <div class="row quick-access g-4 mb-4">
+                    <div class="col-md-6">
+                        <a href="add_product.html" class="text-decoration-none text-dark">
+                            <div class="card shadow-sm text-center p-4">
+                                <div class="card-icon text-primary">➕</div>
+                                <h5 class="mt-2">Add Product</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="add_category.html" class="text-decoration-none text-dark">
+                            <div class="card shadow-sm text-center p-4">
+                                <div class="card-icon text-secondary">📁</div>
+                                <h5 class="mt-2">Add Category</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- 4. Top Selling Products -->
+                <div class="card shadow-sm mb-5">
+                    <div class="card-header bg-white">
+                        <h5 class="mb-0">Top Selling Products (This Month)</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-5">
+                                    <img src="../img/lakme_9t5_hya_matte_foundation_hyaluronic_acid.jpg" class="product-img" style="max-width: 100px;" alt="Lipstick">
+                                    <span>Lakme Matte Lipstick</span>
+                                </div>
+                                <span>1,240 units</span>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-5">
+                                    <img src="../img/lakme_9t5_hya_matte_foundation_hyaluronic_acid.jpg" class="product-img" style="max-width: 100px;" alt="Sunscreen">
+                                    <span>Lakme Sunscreen SPF50</span>
+                                </div>
+                                <span>980 units</span>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-5">
+                                    <img src="../img/lakme_9t5_hya_matte_foundation_hyaluronic_acid.jpg" class="product-img" style="max-width: 100px;" alt="Foundation">
+                                    <span>Lakme 9to5 Foundation</span>
+                                </div>
+                                <span>870 units</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <!-- ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- AOS js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+    <!-- custom js -->
+    <script src="/js/admin-main.js"></script>
+</body>
+
+</html>
